@@ -93,10 +93,10 @@ def matrizVandermonde(v):
 def fibonacci(n):
     if n<=1:
         return n
-    return fibonacci(n-2) + fibonacci(n-1)
+    return np.linalg.matrix_power(np.array([[1,1],[1,0]]),n)[0][1]
 
 def numeroAureo(n):
-    return fibonacci(n) / fibonacci(n-1)
+    return fibonacci(n+1) / fibonacci(n)
 
 def matrizFibonacci(n):
     A=np.zeros((n,n))
@@ -224,3 +224,4 @@ print(matrizHilbert(5))
 print(np.linspace(0,10,5))
 print(row_echelon(B))
 calcular100Puntos()
+print(fibonacci(5))
