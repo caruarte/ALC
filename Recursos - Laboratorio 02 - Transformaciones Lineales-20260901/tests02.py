@@ -1,6 +1,6 @@
 
 import numpy as np
-from lab2 import rota, escala, rota_y_escala, afin, trans_afin
+from labo02 import rota, escala, rota_y_escala, afin, trans_afin
 
 
 # --- Tests extraídos del enunciado ---
