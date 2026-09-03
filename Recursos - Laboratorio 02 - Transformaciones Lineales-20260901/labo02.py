@@ -9,15 +9,11 @@ def escala(s):
         M[i][i] = M[i][i] * s[i]
     return M
 
-def rota_y_escala(theta,s):
-    rotar = np.array([[np.cos(theta), -np.sin(theta)],[np.sin(theta), np.cos(theta)]])
-    escalar = np.eye(2)
-    for i in range(2):
-        escalar[i][i] = escalar[i][i] * s[i]
-
-    res = escalar@rotar
-
-    return res
+def rota_y_escala(theta, s):
+    R = rota(theta)
+    S = escala(s)
+    M = S@R
+    return M
 
 def afin(theta,s,b): # s y b son arrays de dos elementos, devuelve una matriz 3x3
     rotar = np.array([[np.cos(theta), -np.sin(theta)],[np.sin(theta), np.cos(theta)]])
